@@ -22,88 +22,83 @@
     <header class="site-header">
         <div class="container">
             <a href="./index.html" class="logo"><span class="logo__accent">Web</span>Studio</a>
-                <nav class="site-nav">
-                    <ul class="list">
-                        <li class="item"><a class="link link-current" href="">Студія</a></li>
-                        <li class="item"><a class="link" href="./portfolio.html">Портфоліо</a></li>
-                        <li class="item"><a class="link" href="">Контакти</a></li>
-                    </ul>
-
-                </nav>
-                <ul class="auth-nav">
-                    <li class="item">
-                        <a class="link" href="mailto:info@devstudio.com"><svg class="icon-n" height="12" width="16">
-                                <use href="./images/icons.svg#icon-envelope"></use>
-                            </svg>info@devstudio.com</a>
-                    </li>
-                    <li class="item"><a class="link" href="tel:+380961111111"><svg class="icon-n" height="16" width="10">
-                                <use href="./images/icons.svg#icon-smartphone"></use>
-                            </svg>+38 096 111 11 11</a></li>
+            <nav class="site-nav">
+                <ul class="list">
+                    <li class="item"><a class="link link-current" href="">Студія</a></li>
+                    <li class="item"><a class="link" href="./portfolio.html">Портфоліо</a></li>
+                    <li class="item"><a class="link" href="">Контакти</a></li>
                 </ul>
-            </div>
+
+            </nav>
+            <ul class="auth-nav">
+                <li class="item">
+                    <a class="link" href="mailto:info@devstudio.com"><svg class="icon-n" height="12" width="16">
+                            <use href="./images/icons.svg#icon-envelope"></use>
+                        </svg>info@devstudio.com</a>
+                </li>
+                <li class="item"><a class="link" href="tel:+380961111111"><svg class="icon-n" height="16" width="10">
+                            <use href="./images/icons.svg#icon-smartphone"></use>
+                        </svg>+38 096 111 11 11</a></li>
+            </ul>
+        </div>
     </header>
     <main>
 
         <section class="slogan">
             <div class="container">
-            <h1 class="slogan-title">Ефективні рішення для <br />вашого бізнесу</h1>
-            <button type="button" class="button-primary" data-modal-open>Замовити послугу</button>
+                <h1 class="slogan-title">Ефективні рішення для <br />вашого бізнесу</h1>
+                <button type="button" class="button-primary" data-modal-open>Замовити послугу</button>
             </div>
-            <div class="backdrop is-hidden" data-modal>
+            <div data-modal class="overlay is-hidden">
                 <div class="modal">
-                    <button class="modal__button-close" data-modal-close>
-                        <svg class="svg-close">
-                            <use href="./images/sprite.svg#svg-close"></use>
-                        </svg>
-                    </button>
-                    <form class="js-speaker-form form">
-                        <h2 class="modal__topic">
-                            Залиште свої дані, ми вам передзвонимо
-                        </h2>
-                        <label class="form-field">
-                            <input type="text" name="name" class="form-input" placeholder=" ">
-            
-                            <span class="form-label">Ім'я</span>
-                            <svg class="svg-modal">
-                                <use href="./images/sprite.svg#modal-person"></use>
+                    <div class="close-wrap">
+                        <button data-modal-close class="btn-close" type="button">
+                            <svg class="icon icon-close" width="11" height="11">
+                                <use href="./images/sprite.svg#svg-close"></use>
                             </svg>
-                        </label>
-            
-                        <label class="form-field">
-                            <input type="tel" name="tel" class="form-input" placeholder=" ">
-            
-                            <span class="form-label">Телефон</span>
-                            <svg class="svg-modal">
+                        </button>
+                    </div>
+                    <form class="order__form" action="index.html" name="f1" method="get">
+                        <h3 class="form__title">Залиште свої дані, ми вам передзвонимо</h3>
+                        <label class="form__label" for="name">Ім'я</label>
+                        <div class="input-wrap">
+                            <input class="form__input name" type="text" name="name" id="name" required>
+                            <svg class="icon icon-name" width="12" height="12">
+                            <use href="./images/sprite.svg#modal-person"></use>
+                            </svg>
+                        </div>
+                        <label class="form__label" for="tel">Телефон</label>
+                        <div class="input-wrap">
+                            <input class="form__input tel" type='tel' name="tel" id="tel" required>
+                            <svg class="icon icon-tel" width="12" height="12">
                                 <use href="./images/sprite.svg#modal-phone"></use>
                             </svg>
-                        </label>
-            
-                        <label class="form-field">
-                            <input type="email" name="mail" class="form-input" placeholder=" ">
-            
-                            <span class="form-label">Пошта</span>
-                            <svg class="svg-modal">
+                        </div>
+                        <label class="form__label" for="email">Пошта</label>
+                        <div class="input-wrap">
+                            <input class="form__input email" type="email" name="email" id="email" required>
+                            <svg class="icon icon-email" width="12" height="12">
                                 <use href="./images/sprite.svg#modal-email"></use>
                             </svg>
-                        </label>
-                        <label class="form-field">
-                            <textarea class="form-input form-input--comment" name="comment" placeholder=" "></textarea>
-                            <span class="form-label--comment">Коментар</span>
-                        </label>
-            
-                        <label class="form-field-checkbox">
-                            <input class="checkbox" type="checkbox" name="topic" value="check">
-                            <span class="icon"></span>
-                            <span class="checkbox-text">
-                                Погоджуюся з розсилкою та приймаю
-                                <a href="" class="checkbox-link">Умови договору</a>
-                            </span>
-                        </label>
-            
-                        <button class="modal__button-send">Відправити</button>
+                        </div>
+                        <div class="input-wrap">
+                            <label class="form__label" for="form-text">Коментар</label>
+                            <textarea class="form__input form__text" id="form-text" placeholder="Введіть текст"></textarea>
+                        </div>
                     </form>
+                    
+                    <label class="form-field-checkbox">
+                        <input class="checkbox" type="checkbox" name="topic" value="check">
+                        <span class="icon-topic"></span>
+                        <span class="checkbox-text">
+                            Погоджуюся з розсилкою та приймаю
+                            <a href="" class="checkbox-link">Умови договору</a>
+                        </span>
+                    </label>
+                    
+                    <button class="modal__button-send">Відправити</button>
                 </div>
-            </div>
+            
         </section>
 
         <section class="features section">
@@ -112,9 +107,9 @@
                 <ul class="features-list">
                     <li class="item">
                         <div class="thumb">
-                        <svg class="icon-p"  height="70" width="70">
-                            <use href="./images/sprite.svg#icon-sputnik"></use>
-                        </svg>
+                            <svg class="icon-p" height="70" width="70">
+                                <use href="./images/sprite.svg#icon-sputnik"></use>
+                            </svg>
                         </div>
                         <h3 class="section-item-one">УВАГА ДО ДЕТАЛЕЙ</h3>
                         <p class="section-text">Ідейні міркування, і навіть початок повсякденної роботи з формування
@@ -155,27 +150,27 @@
                 </ul>
             </div>
         </section>
-          
+
         <section class="what-we-do section">
             <div class="container">
-            <h2 class="what-we-do__title">Чим ми займаємося</h2>
-            <ul class="about-us list">
-                <li class="about-us__item">
-                    <img src="./images/img1.jpg" alt="Десктопні додатки" width="370">
-                    <h3 class="about-us__label">Десктопні додатки</h3>
-                </li>
-                <li class="about-us__item">
-                    <img src="./images/img2.jpg" alt="Мобільні додатки" width="370">
-                    <h3 class="about-us__label">Мобільні додатки</h3>
-                </li>
-                <li class="about-us__item">
-                    <img src="./images/img3.jpg" alt="Дизайнерські рішення" width="370">
-                    <h3 class="about-us__label">Дизайнерські рішення</h3>
-                </li>
-            </ul>
+                <h2 class="what-we-do__title">Чим ми займаємося</h2>
+                <ul class="about-us list">
+                    <li class="about-us__item">
+                        <img src="./images/img1.jpg" alt="Десктопні додатки" width="370">
+                        <h3 class="about-us__label">Десктопні додатки</h3>
+                    </li>
+                    <li class="about-us__item">
+                        <img src="./images/img2.jpg" alt="Мобільні додатки" width="370">
+                        <h3 class="about-us__label">Мобільні додатки</h3>
+                    </li>
+                    <li class="about-us__item">
+                        <img src="./images/img3.jpg" alt="Дизайнерські рішення" width="370">
+                        <h3 class="about-us__label">Дизайнерські рішення</h3>
+                    </li>
+                </ul>
             </div>
         </section>
-    
+
         <section class="team section">
             <div class="container">
                 <h2 class="section-title text-center ">Наша команда</h2>
@@ -331,16 +326,16 @@
                 </ul>
             </div>
         </section>
-       
-            <section class="customer section">
-                <div class="container">
+
+        <section class="customer section">
+            <div class="container">
                 <h2 class="customer_title">Постійні клієнти</h2>
                 <ul class="customer_content list">
                     <li class="customer__item">
                         <a href="" class="customer__link">
                             <svg class="clients__icon" height="60" width="106">
                                 <use href="./images/icons.svg#icon-client1"></use>
-                            </svg>                    
+                            </svg>
                         </a>
                     </li>
                     <li class="customer__item">
@@ -379,9 +374,9 @@
                         </a>
                     </li>
                 </ul>
-                </div>
-            </section>
-      
+            </div>
+        </section>
+
     </main>
 
     <footer class="site-footer">
@@ -436,6 +431,18 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div class="subscribe">
+                <h3 class="subscribe__title">Підпишіться на розсилку</h3>
+                <div class="button-div">
+                    <input type="text" placeholder="E-mail" class="subscribe__input" />
+                    <button class="subscribe__button">
+                        Підписатися
+                        <svg class="svg-send__icon-send" height="24" width="24">
+                            <use href="./images/sprite.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </footer>
